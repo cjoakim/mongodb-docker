@@ -1,6 +1,6 @@
 # mongodb-docker
 
-Run MongoDB Community Edition Locally as a Docker Container
+Run MongoDB Community Edition Locally as a Docker Container.
 
 Because running it as a container is so much easier than installing
 and running it on your (macOS) laptop.
@@ -20,7 +20,7 @@ To check the status of the running container:
 $ ./compose.sh ps
 ```
 
-To check shutdown mongodb and stop the container:
+To shutdown mongodb and stop the container:
 
 ```
 $ ./compose.sh down
@@ -35,6 +35,9 @@ $ ./mongo_cli.sh local
 ---
 
 ## Create and Load the Sample Databases
+
+This section assumes that the local MongoDB is running as a Docker container
+as described above.
 
 ### Openflights Database
 
