@@ -6,18 +6,21 @@
 use openflights
 
 db.airports.drop()
-db.createCollection("airports")
-
 db.airlines.drop()
-db.createCollection("airlines")
-
+db.countries.drop()
+db.planes.drop()
 db.routes.drop()
+
+db.createCollection("airports")
+db.createCollection("airlines")
+db.createCollection("countries")
+db.createCollection("planes")
 db.createCollection("routes")
 
-db.planes.drop()
-db.createCollection("planes")
-
-db.countries.drop()
-db.createCollection("countries")
+db.airports.count()
+db.airlines.count()
+db.countries.count()
+db.planes.count()
+db.routes.count()
 
 show collections

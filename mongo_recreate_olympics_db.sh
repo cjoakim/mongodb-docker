@@ -11,6 +11,9 @@ echo 'database URL: '$DOCKER_MONGODB_URL
 echo 'init database ...'
 mongo -u $DOCKER_MONGODB_USER -p $DOCKER_MONGODB_PASS $DOCKER_MONGODB_URL/admin < mongo/olympics_init.ddl
 
+echo 'sleeping 10 after init database...'
+sleep 10
+
 echo 'mongoimport countries ...'
 mongoimport --authenticationDatabase admin -u $DOCKER_MONGODB_USER -p $DOCKER_MONGODB_PASS --uri mongodb://@localhost:27017 \
     --db olympics \

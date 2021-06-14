@@ -11,6 +11,8 @@ echo 'database URL: '$DOCKER_MONGODB_URL
 echo 'init database ...'
 mongo -u $DOCKER_MONGODB_USER -p $DOCKER_MONGODB_PASS $DOCKER_MONGODB_URL/admin < mongo/openflights_init.ddl
 
+echo 'sleeping 10 after init database...'
+sleep 10
 
 echo 'mongoimport airlines ...'
 mongoimport --authenticationDatabase admin -u $DOCKER_MONGODB_USER -p $DOCKER_MONGODB_PASS --uri mongodb://@localhost:27017 \
