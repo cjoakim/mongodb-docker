@@ -248,3 +248,7 @@ games
 	"medal_value" : "0"
 }
 ```
+
+## Cluster
+
+See https://www.mongodb.com/compatibility/deploying-a-mongodb-cluster-with-docker
