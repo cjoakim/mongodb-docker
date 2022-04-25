@@ -1,26 +1,20 @@
 // MongoDB "DDL" initialize the "openflights" database and its collections.
-// Chris Joakim, Microsoft, June 2021
+// Chris Joakim, Microsoft
 
-// TODO - add indexes 
+use OpenFlights
 
-use openflights
+db.Airports.drop()
+db.Airlines.drop()
+db.Countries.drop()
+db.Planes.drop()
+db.Routes.drop()
+db.Passengers.drop()
 
-db.airports.drop()
-db.airlines.drop()
-db.countries.drop()
-db.planes.drop()
-db.routes.drop()
-
-db.createCollection("airports")
-db.createCollection("airlines")
-db.createCollection("countries")
-db.createCollection("planes")
-db.createCollection("routes")
-
-db.airports.count()
-db.airlines.count()
-db.countries.count()
-db.planes.count()
-db.routes.count()
+db.createCollection("Airports")
+db.createCollection("Airlines")
+db.createCollection("Countries")
+db.createCollection("Planes")
+db.createCollection("Routes")
+db.createCollection("Passengers")
 
 show collections
